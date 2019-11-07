@@ -1,2 +1,11 @@
-let count1 = 0;
-let count2 = 0;
+let players = [
+    {
+        score: 0
+    },
+    {
+        score: 0
+    }
+]
+function clicked(playerIndex) {
+    if (players[playerIndex])
+}
