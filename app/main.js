@@ -16,8 +16,7 @@ function clicked(playerIndex) {
         return
     }
     players[playerIndex].score++
-    player1Elem.textContent = players[0].score.toString()
-    player2Elem.textContent = players[1].score.toString()
+    drawScores()
 }
 
 function winValidation() {
@@ -31,4 +30,14 @@ function winByTwo() {
     return Math.abs(players[0].score - players[1].score) > 1;
 }
 
+function reset() {
+    players[0].score = 0
+    players[1].score = 0
+    drawScores()
+}
+
+function drawScores() {
+    player1Elem.textContent = players[0].score.toString()
+    player2Elem.textContent = players[1].score.toString()
+}
 
