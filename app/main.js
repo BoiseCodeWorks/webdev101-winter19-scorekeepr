@@ -12,15 +12,23 @@ let player2Elem = document.querySelector("#count2")
 let finalScore = 11
 
 function clicked(playerIndex) {
+    if (winValidation()) {
+        return
+    }
     players[playerIndex].score++
     player1Elem.textContent = players[0].score.toString()
     player2Elem.textContent = players[1].score.toString()
 }
 
 function winValidation() {
-    if (players[0].score == finalScore) {
-
+    if ((players[0].score >= finalScore || players[1].score >= finalScore) && winByTwo()) {
+        return true
     }
+    return false
+}
+
+function winByTwo() {
+    return Math.abs(players[0].score - players[1].score) > 1;
 }
 
 
