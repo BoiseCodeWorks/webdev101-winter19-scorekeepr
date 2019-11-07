@@ -1,11 +1,12 @@
-let players = [
-    {
-        score: 0
-    },
-    {
-        score: 0
-    }
-]
+let player1 = {
+    score: 0
+}
+let player2 = {
+    score: 0
+}
+let players = [player1, player2]
+
 function clicked(playerIndex) {
-    if (players[playerIndex])
+    players[playerIndex].score++
+    console.log(players[playerIndex].score)
 }
